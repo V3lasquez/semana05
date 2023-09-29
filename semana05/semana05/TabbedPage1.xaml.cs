@@ -15,6 +15,10 @@ namespace semana05
         public TabbedPage1()
         {
             InitializeComponent();
+            btnClose.Clicked += async (sender, e) =>
+            {
+                await Navigation.PopAsync();
+            };
         }
     }
 }

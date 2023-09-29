@@ -3,7 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="semana05.CorouselPage1">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <ContentPage>
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS. Android" Value="0,40,0,0"/>
+            </OnPlatform>
+        </ContentPage.Padding>
+        <StackLayout>
+            <Label Text="Red" FontSize="Medium" HorizontalOptions="Center"/>
+            <BoxView Color="red" WidthRequest="200" HeightRequest="200"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="green" FontSize="Medium" HorizontalOptions="Center"/>
+            <BoxView Color="green" WidthRequest="200" HeightRequest="200"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="blue" FontSize="Medium" HorizontalOptions="Center"/>
+            <BoxView Color="blue" WidthRequest="200" HeightRequest="200"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <Button Text="close" x:Name="btnClose"/>
+    </ContentPage>
 </CarouselPage>
