@@ -18,8 +18,8 @@ namespace semana05
         }
         async void OnPreviousPageButtonClicked(object sender, EventArgs e)
         {
-            await Nagivation.PopAsync();
-            //hola
+            await Navigation.PopAsync();
+            
         }
     }
 }
